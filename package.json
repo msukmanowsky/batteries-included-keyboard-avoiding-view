@@ -1,0 +1,32 @@
+{
+  "name": "batteries-included-keyboard-avoiding-view",
+  "version": "0.1.0",
+  "description": "A KeyboardAvoidingView for React Native that actually works out of the box.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "npx babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msukmanowsky/batteries-included-keyboard-avoiding-view.git"
+  },
+  "author": "Mike Sukmanowsky <mike.sukmanowsky@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msukmanowsky/batteries-included-keyboard-avoiding-view/issues"
+  },
+  "homepage": "https://github.com/msukmanowsky/batteries-included-keyboard-avoiding-view#readme",
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-native": "^0.59.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "metro-react-native-babel-preset": "^0.53.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  }
+}
