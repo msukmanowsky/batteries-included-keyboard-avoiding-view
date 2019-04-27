@@ -1,34 +1,32 @@
-import React from 'react';
+import React from "react";
 import {
   Keyboard,
   KeyboardAvoidingView as RNKeyboardAvoidingView,
   TouchableWithoutFeedback,
   View,
-  ViewPropTypes,
-} from 'react-native';
-import PropTypes from 'prop-types';
-
+  ViewPropTypes
+} from "react-native";
+import PropTypes from "prop-types";
 
 export default class KeyboardAvoidingView extends React.Component {
-
   static propTypes = {
     KeyboardAvoidingViewProps: RNKeyboardAvoidingView.propTypes,
     keyboardAvoidingViewStyle: ViewPropTypes.style,
-    innerViewStyle: ViewPropTypes.style,
-  }
+    innerViewStyle: ViewPropTypes.style
+  };
 
   static defaultProps = {
     KeyboardAvoidingViewProps: {},
     keyboardAvoidingViewStyle: {},
     innerViewStyle: {}
-  }
+  };
 
   render() {
     const {
       children,
       innerViewStyle,
       KeyboardAvoidingViewProps,
-      keyboardAvoidingViewStyle,
+      keyboardAvoidingViewStyle
     } = this.props;
 
     return (
@@ -36,18 +34,18 @@ export default class KeyboardAvoidingView extends React.Component {
         behavior="padding"
         style={{
           flex: 1,
-          ...keyboardAvoidingViewStyle,
+          ...keyboardAvoidingViewStyle
         }}
         {...KeyboardAvoidingViewProps}
       >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View
             style={{
-              justifyContent: 'flex-end',
-              ...innerViewStyle,
+              justifyContent: "flex-end",
+              ...innerViewStyle
             }}
           >
-            { children }
+            {children}
           </View>
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
